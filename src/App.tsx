@@ -1,20 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import NewComponents from "./map/Map";
 
 function App() {
 
-    const topCars = [
-        {manufacturer: 'BMW ', model: 'm5cs'},
-        {manufacturer: 'Mercedes ', model: 'e63s'},
-        {manufacturer: 'Audi ', model: 'rs6'}
-    ]
+    let [a, setA] = useState(1);
+
+    function onClickButtonHandler() {
+        setA(++a)
+    }
 
     return (
         <>
-            <NewComponents topCars={topCars}/>
+            <div>{a}</div>
+            <button onClick={() => {
+                onClickButtonHandler()
+            }}></button>
         </>
-    );
+    )
 }
 
 export default App;
