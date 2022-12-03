@@ -9,14 +9,21 @@ function App() {
     function onClickButtonHandler() {
         setA(++a)
     }
+    function setOnZero (){
+        setA(0)
+    }
+
 
     return (
-        <>
-            <div>{a}</div>
+        <div className="App">
+            <h1>{a}</h1>
             <button onClick={() => {
                 onClickButtonHandler()
-            }}></button>
-        </>
+            }}>+</button>
+            <button onClick={setOnZero}>
+                Zero
+            </button>
+        </div>
     )
 }
 
