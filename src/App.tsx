@@ -1,29 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
-import NewComponents from "./map/Map";
+import Filter from "./Filter/Filter";
 
 function App() {
-
-    let [a, setA] = useState(1);
-
-    function onClickButtonHandler() {
-        setA(++a)
-    }
-    function setOnZero (){
-        setA(0)
-    }
-
-
-    return (
-        <div className="App">
-            <h1>{a}</h1>
-            <button onClick={() => {
-                onClickButtonHandler()
-            }}>+</button>
-            <button onClick={setOnZero}>
-                Zero
-            </button>
-        </div>
+    return(
+    <Filter/>
     )
 }
 
